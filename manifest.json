@@ -1,0 +1,21 @@
+{
+ "manifest_version": 2,
+
+  "name": "JoyPants",
+  "description": "This extension will put joy in your pants when you Configamate.",
+  "version": "1.0",
+
+  "content_scripts": [ {
+    "js": [ "jquery-2.2.1.min.js", "slick.min.js", "joypants.js" ],
+    "css": [ "joypants.css", "slick.css", "slick-theme.css" ],
+    "matches": [ "https://*/admin/manage/onboardconfig/*"]
+  }],
+
+  "browser_action": {
+   "default_icon": "joypants.png",
+   "default_popup": "joypants.html"
+  },
+  "permissions": [
+   "declarativeContent"
+   ]
+}
